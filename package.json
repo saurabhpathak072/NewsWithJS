@@ -1,0 +1,25 @@
+{
+  "name": "news_aggregator",
+  "version": "1.0.0",
+  "description": "News Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurabhpathak072/NewsWithJS.git"
+  },
+  "keywords": [
+    "News",
+    "JS",
+    "Babel",
+    "Webpacks"
+  ],
+  "author": "Saurabh Pathak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saurabhpathak072/NewsWithJS/issues"
+  },
+  "homepage": "https://github.com/saurabhpathak072/NewsWithJS#readme"
+}
