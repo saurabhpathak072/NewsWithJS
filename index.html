@@ -14,7 +14,7 @@
 </head>
 
 
-<div class="container-fluid wrapper">
+<div class="container-fluid wrapper wrapper">
 <body>
     
         <div class="heading">
@@ -26,38 +26,29 @@
         <div class="container-fluid">
             <div class="newsContainer1">
 
-
-                <section class="section news">
-                    <ul id="news-articles" class="articles"></ul>
-                    <div class="not-found notification is-info" style="display: none;">
-                      No article was found based on the search.
+                <div class="col-md-3 bg preloader1">
+                    <div class="loader" id="loader-2">
+                      <span></span>
+                      <span></span>
+                      <span></span>
                     </div>
-                    <div class="error" style="display: none;">
-                      <div class="notification is-danger">
-                        Could not fetch Articles. Try Again.
-                      </div>
-                    </div>
-                    <div class="loading" id="loading">
-                      <div class="lds-spinner">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                    </div>
-                    <button class="button" id="show-more">Show More</button>
-                  </section>
+                  </div>
+                
 
 
             </div>
+            <section class="section news">
+                <ul id="news-articles" class="articles"></ul>
+                <div class="not-found notification is-info" style="display: none;">
+                  No article was found based on the search.
+                </div>
+                <div class="error" style="display: none;">
+                  <div class="notification is-danger">
+                    Could not fetch Articles. Try Again.
+                  </div>
+                </div>
+               <!-- <button class="button" id="show-more">Show More</button> -->
+              </section>
             
         </div>
       
@@ -113,7 +104,7 @@
 
     </body>
     <div>
-        <nav aria-label="Page navigation example">
+        <!-- <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -121,7 +112,7 @@
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
-          </nav>
+          </nav> -->
     </div>
 </div>
 </html>

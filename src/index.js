@@ -1,9 +1,11 @@
 
 let searchval;
+let search1;
 let NewsContainer = document.querySelector('.newsContainer1');
 let articles = [];
 let search =document.getElementById("search");
-//let pagenum = document.getElementByClass("page-item");
+let pagenum = document.querySelectorAll(".page-item");
+let info = document.querySelector(".is-info");
 let page;
 const headlinesFilter = {
     page: 1,
@@ -33,7 +35,8 @@ let renderHeadlines =async (data) =>{
         let NewsList='<ul class="carcontainer container">';
        articles.forEach((art)=>{
            //console.log(art.author);
-           
+           NewsContainer.style.display='flex';
+           info.style.display = 'none';
             NewsList += `<li class="card-body card1"><h5 class="card-title arttile">${art.title}</h5>
             
                         <img class="img-thumbnail mx-auto d-block" style="height: 200px,text-align:center,
@@ -54,6 +57,15 @@ let renderHeadlines =async (data) =>{
            NewsContainer.innerHTML=NewsList;
             console.log("Newscon",NewsContainer.innerHTML)
     }
+    else if(articles.length == 0){
+        console.log(info);
+        info.style.display = 'block';
+        console.log(NewsContainer);
+        NewsContainer.style.display='none';
+        
+        
+    }
+
 
     let getSearch = (e) =>{
         if(e.key==="Enter" || e.keyCode === 13 || e.which === 13){
@@ -70,10 +82,7 @@ let renderHeadlines =async (data) =>{
 
     search.addEventListener("keypress",getSearch)
 
-// page=pagenum
-//     let pageno =()=>{
 
-//     }
 }
 
 getHeadLines();
