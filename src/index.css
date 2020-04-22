@@ -34,11 +34,14 @@ h1{
 
 .carcontainer{
     display: flex;
-   background-color:rgb(25, 50, 67);
+   
     
     flex-wrap: wrap;
     
 }
+/* .dark{
+    background-color:rgb(25, 50, 67);
+} */
 
 
 .newsContainer1{
@@ -66,7 +69,8 @@ h1{
    
     overflow: hidden;
     word-wrap: break-word;
-    color: white;
+    
+    text-justify: inter-word;
 }
 
 .text{
@@ -79,6 +83,10 @@ h1{
     background-color: rgb(25, 50, 67);
     color: white;
     
+}
+.nowrapper{
+    background-color: lightblue;
+    color: rgb(25, 50, 67);
 }
 
 .search{
@@ -100,11 +108,26 @@ h1{
     flex-wrap: wrap;
     background-color: rgb(65, 70, 100);
     overflow: scroll;
-    min-width: 170px;
+    min-width: 165px;
 }
+
+.card1_dark{
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 500px; 
+    color: rgb(65, 70, 100);
+    margin: 10px 10px;
+    flex-wrap: wrap;
+    background-color: white;
+    overflow: scroll;
+    min-width: 165px;
+}
+
 .button1{
     width: 140.13px;
     height: 40px;
+    margin : 10px 10px;
 }
 
 #loader-2 span{
@@ -155,4 +178,71 @@ h1{
 
   .wrapper{
       min-height: 1000px;
+  }
+
+
+  /*switcher*/
+  .label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .label-text {
+    font-size: 1.4rem;
+    margin-left: 8px;
+    color: var(--card-col);
+  }
+  
+  .toggle {
+    isolation: isolate;
+    position: relative;
+    height: 24px;
+    width: 48px;
+    border-radius: 15px;
+    background: #d6d6d6;
+    overflow: hidden;
+  }
+  
+  .toggle-inner {
+    z-index: 2;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    height: 22px;
+    width: 46px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .active-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background: #7fa2fd;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.05s linear 0.17s;
+  }
+  
+  .toggle-state {
+    display: none;
+  }
+  
+  .indicator {
+    height: 100%;
+    width: 200%;
+    background: white;
+    border-radius: 13px;
+    transform: translate3d(-75%, 0, 0);
+    transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  }
+  
+  .toggle-state:checked ~ .active-bg {
+    transform: translate3d(-50%, 0, 0);
+  }
+  
+  .toggle-state:checked ~ .toggle-inner .indicator {
+    transform: translate3d(25%, 0, 0);
   }

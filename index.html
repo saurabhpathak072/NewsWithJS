@@ -14,17 +14,36 @@
 </head>
 
 
-<div class="container-fluid wrapper wrapper">
+<div class="container-fluid wrapper" id="theme">
 <body>
     
         <div class="heading">
             <h1>News Aggregator </h1>
+            
+        </div>
+        <div class="language-switcher">
+          <label class="label">
+            <div class="toggle">
+              <input
+                class="toggle-state"
+                type="checkbox"
+                name="check"
+                value="check"
+                id="mode-switch"
+              />
+              <div class="toggle-inner">
+                <div class="indicator"></div>
+              </div>
+              <div class="active-bg"></div>
+            </div>
+            <div class="label-text">Enable Dark Mode</div>
+          </label>
         </div>
         <div class="container search">
         <input class="form-control form-control-lg" id="search" type="text" placeholder="type here to search news...">
         </div>
         <div class="container-fluid">
-            <div class="newsContainer1">
+            <div class="newsContainer1" >
 
                 <div class="col-md-3 bg preloader1">
                     <div class="loader" id="loader-2">
