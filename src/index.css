@@ -93,14 +93,14 @@ h1{
 .card1{
     position: relative;
     display: flex;
-    width: 35%;
+    width: 30%;
     height: 500px; 
     color: white;
     margin: 10px 10px;
     flex-wrap: wrap;
     background-color: rgb(65, 70, 100);
     overflow: scroll;
-    min-width: 125px;
+    min-width: 145px;
 }
 .button1{
     width: 140.13px;
