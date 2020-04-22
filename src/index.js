@@ -7,6 +7,7 @@ let search =document.getElementById("search");
 let pagenum = document.querySelectorAll(".page-item");
 let info = document.querySelector(".is-info");
 let page;
+let error = document.querySelector(".error");
 const headlinesFilter = {
     page: 1,
     pageSize: 20,
@@ -31,12 +32,13 @@ let renderHeadlines =async (data) =>{
     let li,ul;
     console.log("1",data.articles);
      articles = data.articles;
-    if(articles.length){
+    if(data.length){
         let NewsList='<ul class="carcontainer container">';
        articles.forEach((art)=>{
            //console.log(art.author);
            NewsContainer.style.display='flex';
            info.style.display = 'none';
+           error.style.display='none';
             NewsList += `<li class="card-body card1"><h5 class="card-title arttile">${art.title}</h5>
             
                         <img class="img-thumbnail mx-auto d-block" style="height: 200px,text-align:center,
@@ -57,13 +59,20 @@ let renderHeadlines =async (data) =>{
            NewsContainer.innerHTML=NewsList;
             console.log("Newscon",NewsContainer.innerHTML)
     }
-    else if(articles.length == 0){
+    else if(data.length==0){
         console.log(info);
         info.style.display = 'block';
         console.log(NewsContainer);
         NewsContainer.style.display='none';
+
         
         
+    }
+    else{
+            console.log(error);
+            error.style.display='block';
+            NewsContainer.style.display='none';
+            error.innerHTML=`staus ${data.status} and message ${data.message}`
     }
 
 
