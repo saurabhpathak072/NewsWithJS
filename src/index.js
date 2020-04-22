@@ -32,7 +32,7 @@ let renderHeadlines =async (data) =>{
     let li,ul;
     console.log("1",data.articles);
      articles = data.articles;
-    if(data.length){
+    if(articles.length){
         let NewsList='<ul class="carcontainer container">';
        articles.forEach((art)=>{
            //console.log(art.author);
